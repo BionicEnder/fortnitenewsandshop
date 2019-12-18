@@ -1,1 +1,1 @@
-document.getElementById('date').innerHTML = new Date()
+document.getElementById('date').innerHTML = new Date().toDateString();toTimeString
