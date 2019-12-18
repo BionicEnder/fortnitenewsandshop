@@ -1,5 +1,4 @@
 document.getElementById('date').innerHTML = new Date().toDateString();
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Fortnite-API/js-wrapper@0.2.0/dist/fortnite-api.min.js"></script>
 document.getElementById(`shop`).innerHTML = "yes"
 var shop = fortniteApi.shop
 	.then(res => res.json())
