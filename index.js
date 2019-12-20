@@ -1,8 +1,14 @@
-document.getElementById('date').innerHTML = new Date().toDateString();
-document.getElementById(`shop`).innerHTML = "yes"
-var shop = fortniteApi.shop
+document.getElementById("date").innerHTML = new Date().toDateString();
+var api = require(fortnite)
+var config = {
+	apikey:"6a4f122f5fe17523716030bfa8ba655bb4e60db5a7826f3be868a0f5248a6990",
+	language:"en"
+}
+var fn = new api(config);
+fn.Shop()
 	.then(res => res.json())
 	.then(obj =>{
-		document.getElementById(`yes`).ineerHTML = obj.data.daily[0].items[0].name,
-		document.getElementById(`shop`).innerHTML = obj.data.daily[0].items[0].images.icon.url
-	});toTimeString
+		var object = fortniteApi.getDataFromObject(obj);
+		document.getElementById(`yes`).ineerHTML = "yes"
+		document.getElementById(`shop`).img = "url('res.data.featured[0].items[0].images.icon.url')"
+	});
